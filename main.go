@@ -13,6 +13,7 @@ func sayHelloWorld(w http.ResponseWriter, r *http.Request) {
 
 func main() {
     log.Println("App started on port 8888")
+    panic("Let's crash :D")
     http.HandleFunc("/", sayHelloWorld)
     err := http.ListenAndServe(":8888", nil)
     if err != nil {
